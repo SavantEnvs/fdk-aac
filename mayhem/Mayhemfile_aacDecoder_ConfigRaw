@@ -1,0 +1,9 @@
+project: savantenvs/fdk-aac
+target: aacDecoder_ConfigRaw
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/aacDecoder_ConfigRaw/testsuite
+cmds:
+  - cmd: /mayhem/aacDecoder_ConfigRaw
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/fdk-aac
+target: aac_enc_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/aac_enc_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/aac_enc_fuzzer
+    libfuzzer: true
+    timeout: 5
